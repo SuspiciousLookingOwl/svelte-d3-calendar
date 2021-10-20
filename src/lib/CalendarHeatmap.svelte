@@ -89,9 +89,11 @@
 		"Dec"
 	] as const;
 
-	onMount(() => {
+	$: if (data && colors && chart) {
 		const serialized = data.map(sanitize);
 		const weeks = [...new Set(serialized.map((s) => s.week))];
+
+		chart.innerHTML = "";
 
 		// Base
 		const svg = d3
@@ -155,7 +157,7 @@
 				};
 			})
 			.on("mouseleave", () => (tooltip.visible = false));
-	});
+	}
 </script>
 
 <div
