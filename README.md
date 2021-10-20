@@ -59,7 +59,9 @@ Example:
 </style>
 ```
 
-Output: <img src="https://i.ibb.co/zmH6zhB/image.png">
+Output: 
+
+<img src="https://i.ibb.co/zmH6zhB/image.png">
 
 ---
 
